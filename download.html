@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rough.js Spark-like Star</title>
+		<script src="https://cdn.jsdelivr.net/npm/roughjs/bundled/rough.min.js"></script>
+	</head>
+	<body
+		style="
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: black;
+		"
+	>
+		<canvas id="canvas" width="800" height="800"></canvas>
+
+		<script>
+			// Set up the canvas
+			const canvas = document.getElementById("canvas");
+			const context = canvas.getContext("2d");
+
+			// Set canvas background to black
+			context.fillStyle = "black";
+			context.fillRect(0, 0, canvas.width, canvas.height);
+
+			// Initialize rough.js on the canvas
+			const rc = rough.canvas(canvas);
+
+			// Function to draw a "spark"-like five-pointed star with random messy lines
+			function drawMessyStar(cx, cy, outerRadius, numPoints) {
+				const angleStep = (Math.PI * 2) / numPoints;
+
+				for (let i = 0; i < numPoints; i++) {
+					const angle = i * angleStep;
+					const xEnd = cx + Math.cos(angle) * outerRadius;
+					const yEnd = cy + Math.sin(angle) * outerRadius;
+
+					// Draw random messy lines for each point
+					for (let j = 0; j < 20; j++) {
+						// Draw multiple overlapping lines for each ray to increase messiness
+						const xOffset = (Math.random() - 0.5) * 50; // Random horizontal offset
+						const yOffset = (Math.random() - 0.5) * 50; // Random vertical offset
+						rc.line(cx, cy, xEnd + xOffset, yEnd + yOffset, {
+							stroke: "#ffeb9e",
+							strokeWidth: 15,
+							roughness: 15, // High roughness for messy effect
+						});
+					}
+				}
+			}
+
+			// Draw a five-pointed spark-like star
+			drawMessyStar(400, 400, 300, 5);
+		</script>
+	</body>
+</html>
