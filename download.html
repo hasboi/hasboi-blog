@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Rough.js Spark-like Star</title>
+		<title>Rough.js Messy Star</title>
 		<script src="https://cdn.jsdelivr.net/npm/roughjs/bundled/rough.min.js"></script>
 	</head>
 	<body
@@ -30,31 +30,32 @@
 			// Initialize rough.js on the canvas
 			const rc = rough.canvas(canvas);
 
-			// Function to draw a "spark"-like five-pointed star with random messy lines
-			function drawMessyStar(cx, cy, outerRadius, numPoints) {
-				const angleStep = (Math.PI * 2) / numPoints;
+			// Function to generate points for a five-pointed star
+			function generateStarPoints(cx, cy, outerRadius, innerRadius) {
+				const points = [];
+				const numPoints = 5;
+				const angleStep = Math.PI / numPoints;
 
-				for (let i = 0; i < numPoints; i++) {
+				for (let i = 0; i < numPoints * 2; i++) {
 					const angle = i * angleStep;
-					const xEnd = cx + Math.cos(angle) * outerRadius;
-					const yEnd = cy + Math.sin(angle) * outerRadius;
-
-					// Draw random messy lines for each point
-					for (let j = 0; j < 20; j++) {
-						// Draw multiple overlapping lines for each ray to increase messiness
-						const xOffset = (Math.random() - 0.5) * 50; // Random horizontal offset
-						const yOffset = (Math.random() - 0.5) * 50; // Random vertical offset
-						rc.line(cx, cy, xEnd + xOffset, yEnd + yOffset, {
-							stroke: "#ffeb9e",
-							strokeWidth: 15,
-							roughness: 15, // High roughness for messy effect
-						});
-					}
+					const radius = i % 2 === 0 ? outerRadius : innerRadius;
+					const x = cx + Math.cos(angle) * radius;
+					const y = cy + Math.sin(angle) * radius;
+					points.push([x, y]);
 				}
+
+				return points;
 			}
 
-			// Draw a five-pointed spark-like star
-			drawMessyStar(400, 400, 300, 5);
+			// Draw the messy star
+			const starPoints = generateStarPoints(400, 400, 300, 150);
+			rc.polygon(starPoints, {
+				fill: "#ffeb9e",
+				fillStyle: "zigzag",
+				stroke: "#ffeb9e",
+				strokeWidth: 2,
+				roughness: 5, // High roughness for messy lines
+			});
 		</script>
 	</body>
 </html>
