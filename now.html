@@ -1,71 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Now</title>
+		<link rel="stylesheet" href="style-blog.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="icon" type="image/x-icon" href="/material/favicon.ico" />
+	</head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Now</title>
-  <link rel="stylesheet" href="style-blog.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet" />
-</head>
+	<body>
+		<header class="now">
+			<h1>Now</h1>
+			<p>Last updated: 12 February 2025</p>
+			<p>Days until UTBK: <span id="countdown"></span></p>
+			<iframe
+				style="border-radius: 12px"
+				src="https://open.spotify.com/embed/track/4PwWESSlTwzvw9B7bmtTLS?utm_source=generator"
+				width="300px"
+				height="100"
+				frameborder="0"
+				allowfullscreen=""
+				allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+				loading="lazy"
+			></iframe>
+		</header>
 
-<body>
-  <header class="now">
-    <h1>Now</h1>
-    <p>Last updated: 12 February 2025</p>
-    <p>Days until UTBK: <span id="countdown"></span></p>
-    <iframe style="border-radius:12px"
-      src="https://open.spotify.com/embed/track/4PwWESSlTwzvw9B7bmtTLS?utm_source=generator" width="300px" height="100"
-      frameBorder="0" allowfullscreen=""
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </header>
-
-  <div class="blog-container">
-    <section class="now-section">
-      <h2>Caught Up With</h2>
-      <ul>
-        <li>Nyangkul bareng Pak Bus hampir tiap sore, padahal sibuk ya, kita juga perlu istirahat, atau belajar UTBK.
-          Tapi gapapa deh, soalnya kadang seru, refreshing dari soal UTBK dan berkebun dengan Pak Bus🚌.</li>
-        <li>Mulai back on track lagi dengan UTBK yeyy.</li>
-      </ul>
-    </section>
-    <section class="now-section">
-      <h2>What's On My Mind</h2>
-      <ul>
-        <li>GIMANA SI CARANYA FOKUS AKJRAHGRAHGH.</li>
-      </ul>
-    </section>
-    <!-- <section class="now-section">
+		<div class="blog-container">
+			<section class="now-section">
+				<h2>Caught Up With</h2>
+				<ul>
+					<li>
+						Nyangkul bareng Pak Bus hampir tiap sore, padahal sibuk ya, kita
+						juga perlu istirahat, atau belajar UTBK. Tapi gapapa deh, soalnya
+						kadang seru, refreshing dari soal UTBK dan berkebun dengan Pak
+						Bus🚌.
+					</li>
+					<li>Mulai back on track lagi dengan UTBK yeyy.</li>
+				</ul>
+			</section>
+			<section class="now-section">
+				<h2>What's On My Mind</h2>
+				<ul>
+					<li>GIMANA SI CARANYA FOKUS AKJRAHGRAHGH.</li>
+				</ul>
+			</section>
+			<!-- <section class="now-section">
       <h2>Latest Struggle</h2>
       <p>Akhir-akhir ini</p>
     </section> -->
 
-    <footer>
-      <p>Terima kasih sudah membaca!</p>
-      <a href="..">
-        < Kembali</a>
-    </footer>
-  </div>
+			<footer>
+				<p>Terima kasih sudah membaca!</p>
+				<a href=".."> < Kembali</a>
+			</footer>
+		</div>
 
-  <script>
-    function updateCountdown() {
-      const utbkDate = new Date("April 23, 2025 00:00:00").getTime();
-      const now = new Date().getTime();
-      const difference = utbkDate - now;
+		<script>
+			function updateCountdown() {
+				const utbkDate = new Date("April 23, 2025 00:00:00").getTime();
+				const now = new Date().getTime();
+				const difference = utbkDate - now;
 
-      if (difference > 0) {
-        const daysLeft = Math.floor(difference / (1000 * 60 * 60 * 24));
-        document.getElementById("countdown").textContent = daysLeft;
-      } else {
-        document.getElementById("countdown").textContent = "UTBK is happening!";
-      }
-    }
+				if (difference > 0) {
+					const daysLeft = Math.floor(difference / (1000 * 60 * 60 * 24));
+					document.getElementById("countdown").textContent = daysLeft;
+				} else {
+					document.getElementById("countdown").textContent =
+						"UTBK is happening!";
+				}
+			}
 
-    updateCountdown();
-    setInterval(updateCountdown, 1000 * 60 * 60); // Update every hour
-  </script>
-</body>
-
+			updateCountdown();
+			setInterval(updateCountdown, 1000 * 60 * 60); // Update every hour
+		</script>
+	</body>
 </html>
