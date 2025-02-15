@@ -367,8 +367,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		{
 			title: "Taman Bunga Untukmu",
 			content:
-				"Pada akhirnya, semua ini hanyalah tentang bagaimana cinta menemukan caranya sendiri untuk tetap hidup, meski tak pernah benar-benar dimiliki.",
-			genres: ["Cerpen", "Romance", "Surreal", "Psych. Horror"],
+				"Cinta tidak meminta untuk dimiliki. Ia hanya ingin hidup, bahkan dalam kesunyian yang paling dalam.",
+			genres: ["Cerpen", "Romance", "Surreal"],
 		},
 		{
 			title: "Proton.sh",
