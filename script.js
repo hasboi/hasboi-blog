@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					fillStyle: "zigzag",
 					stroke: "#f7b899",
 					strokeWidth: 2,
-					roughness: 1.2,
+					roughness: 0.8,
 				});
 			}
 		};
