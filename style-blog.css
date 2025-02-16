@@ -20,6 +20,12 @@ p {
 	text-align: justify;
 }
 
+img.now {
+	width: 400px;
+	height: auto;
+	margin-top: 10px;
+}
+
 footer {
 	border-top: #aaa 1px solid;
 	margin-top: 50px;

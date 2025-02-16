@@ -596,6 +596,16 @@ footer {
 	font-size: 1.2rem;
 }
 
+canvas#doodleCanvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 5;
+	pointer-events: none;
+}
+
 @media (max-width: 768px) {
 	#landing {
 		flex-direction: column;
