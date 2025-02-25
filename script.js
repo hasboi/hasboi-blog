@@ -100,6 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			: isPlanetScene
 			? 200
 			: 250;
+
 		const starStrokeWidth = isMobile ? 0.5 : 1.5;
 
 		const stars = Array.from({ length: starCount }, () => ({
