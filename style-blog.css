@@ -8,6 +8,7 @@ body {
 header {
 	padding-bottom: 21px;
 	margin: 0 0 0 0 21px;
+	border-bottom: #aaa 1px solid;
 }
 
 h1 {
@@ -38,12 +39,14 @@ footer p {
 	text-align: center;
 }
 
-img {
+img,
+iframe {
 	width: 100%;
 	height: auto;
 }
 
-figure {
+figure,
+iframe {
 	margin: 20px 0;
 	text-align: center;
 }
@@ -122,7 +125,8 @@ header iframe {
 		font-size: 0.7rem;
 	}
 
-	img {
+	img,
+	iframe {
 		margin: 15px 0;
 	}
 

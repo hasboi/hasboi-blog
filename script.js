@@ -366,6 +366,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	// posting
 	const posts = [
 		{
+			title: "Tujuh Belas",
+			content: "17 Tahun, tapi masih bingung cara menjadi manusia.",
+			genres: ["Diary"],
+		},
+		{
 			title: "Taman Bunga Untukmu",
 			content:
 				"Cinta tidak meminta untuk dimiliki. Ia hanya ingin hidup, bahkan dalam kesunyian yang paling dalam.",
