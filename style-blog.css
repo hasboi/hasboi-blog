@@ -2,7 +2,7 @@ body {
 	background-color: #111;
 	color: #fdf6e3;
 	font-family: "Gloria Hallelujah", cursive;
-	padding: 30px 150px;
+	padding: 30px 190px;
 }
 
 header {
@@ -16,7 +16,8 @@ h1 {
 }
 
 p {
-	line-height: 30px;
+	line-height: 35px;
+	font-size: 1.1rem;
 	letter-spacing: 0.3px;
 	text-align: justify;
 }

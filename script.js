@@ -366,8 +366,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	// posting
 	const posts = [
 		{
-			title: "One Wayne G",
-			content: "Album favoritku dari Mac Demarco",
+			title: "Where I've Been",
+			content: "Kemana aja aku akhir-akhir ini?",
 			genres: ["Diary"],
 		},
 		{
