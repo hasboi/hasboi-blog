@@ -366,6 +366,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	// posting
 	const posts = [
 		{
+			title: "Eternal Sunshine of The Spotless Mind",
+			content: "Imagine film so perfect sampe ga sanggup dikeep di kepala sendiri.",
+			genres: ["Diary", "Review"],
+		},
+		{
 			title: "Where I've Been",
 			content: "Kemana aja aku akhir-akhir ini?",
 			genres: ["Diary"],
