@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,6 +10,7 @@
         html {
             scroll-behavior: smooth;
         }
+
         body {
             background-color: #111;
             color: #fdf6e3;
@@ -48,6 +50,7 @@
             margin-top: 10px;
             text-align: center;
         }
+
         section img {
             width: 200px;
             height: auto;
@@ -60,6 +63,7 @@
             top: 50px;
             right: 50px;
         }
+
         main {
             display: flex;
             gap: 20px;
@@ -106,6 +110,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Snapshot</h1>
@@ -113,23 +118,17 @@
     </header>
 
     <main>
-        <section class="photo" 
-            data-src="material/snapshot/1.jpg" 
-            data-long-caption="Pulang kampung di libur Lebaran, perasaan nostalgia yang datang dari aroma dapur, suara orang-orang yang tertawa, dan jalanan yang tiba-tiba penuh cerita.">
+        <section class="photo" data-src="material/snapshot/1.jpg"
+            data-long-caption="Ini pas Bunda ngajakin buat jalan-jalan. Kebanyakan di jalan doang, nahan mual. Tapi tempatnya lumayan bagus (sori ga bisa megang kamera 🙏), jadi okedeh. Terus juga, di jalan pulang ternyata macet parah, aku sama sepupu aku lainnya yang cowo turun aja tuh dari mobil terus jalan aja buat pulangnya. (2/4/2025)">
             <img src="material/snapshot/1.jpg" alt="post-1">
             <div class="caption">Libur lebaran</div>
         </section>
-        
-        <section class="photo" 
-            data-src="material/snapshot/2.jpg" 
-            data-long-caption="Hujan turun tanpa henti hari ini. Aku duduk di kafe kecil, melihat orang-orang berlalu-lalang sambil menyesap kopi. Rasanya seperti adegan dari film indie.">
-            <img src="material/snapshot/2.jpg" alt="post-2">
-            <div class="caption">Hari hujan yang sepi</div>
-        </section>
+
     </main>
 
     <div id="exit">
-        <a href="..">< Kembali</a>
+        <a href="..">
+            < Kembali</a>
     </div>
 
     <!-- Lightbox Overlay -->
@@ -150,7 +149,7 @@
             photo.addEventListener("click", function () {
                 const imgSrc = this.getAttribute("data-src");
                 const longCaption = this.getAttribute("data-long-caption");
-                
+
                 lightboxImg.src = imgSrc;
                 lightboxCaption.innerText = longCaption;
                 lightbox.style.display = "flex";
@@ -170,4 +169,5 @@
         }
     </script>
 </body>
+
 </html>

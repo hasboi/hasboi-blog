@@ -366,6 +366,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	// posting
 	const posts = [
 		{
+			title: "Mosaic of Everyone You've Ever Loved",
+			content: "I've been thinking about this for a loooonggg time.",
+			genres: ["Diary", "Cerpen"],
+		},
+		{
 			title: "Eternal Sunshine of The Spotless Mind",
 			content: "Imagine film so perfect sampe ga sanggup dikeep di kepala sendiri.",
 			genres: ["Diary", "Review"],
